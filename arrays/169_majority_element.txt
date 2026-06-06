@@ -1,0 +1,9 @@
+169. Majority element
+
+Solution:
+
+class Solution(object):
+    def majorityElement(self, nums):
+        nlen = len(nums)
+        nums.sort()
+        return nums[nlen/ 2]
