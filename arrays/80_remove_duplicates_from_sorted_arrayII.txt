@@ -1,0 +1,27 @@
+80. REMOVE DUPLICATES FROM SORTED ARRAY II
+
+Solution:
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+         nlen= len(nums)
+
+         if nlen <= 2:
+              return nlen
+        
+         k=2
+        
+    
+         for i in range(2,nlen):
+        
+             if nums[i]!=nums[k-2]:
+                 nums[k] = nums[i]
+                 k+=1
+
+         return k
+
+
+
+APPROACH- 2pointers, arrays, use k=2, so when nums[i] = nums[k-2] then keep?NO else keep and k++ (ie 2 positions behind)
+
+        
