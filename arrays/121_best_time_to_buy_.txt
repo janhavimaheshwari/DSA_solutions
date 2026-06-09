@@ -16,3 +16,16 @@ class Solution(object):
 
 APPROACH- loops of i & j to point and compare 2 prices, and store (then compare again until maxProfit)
 
+solution 2 - for better time complexity
+
+class Solution(object):
+    def maxProfit(self, prices):
+        minPrice = float('inf')
+        maxProfit = 0
+
+        for price in prices:
+            minPrice = min(minPrice, price)
+            maxProfit = max(maxProfit, price - minPrice)
+
+        return maxProfit
+
